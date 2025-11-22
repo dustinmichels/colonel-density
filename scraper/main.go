@@ -4,140 +4,154 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strconv"
 	"strings"
-	"time"
+	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
+// Location represents a KFC location with its details
 type Location struct {
-	Name    string
-	URL     string
-	Address string
-	City    string
-	State   string
-	Zip     string
+	URL       string
+	DataCount int
+	PlaceName string
+	StateCode string
+}
+
+// getLocationsOnStatePage fetches and parses a state page to extract location data
+func getLocationsOnStatePage(stateURL string, stateCode string) ([]Location, error) {
+	// Fetch the page
+	resp, err := http.Get(stateURL)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch %s: %w", stateURL, err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != 200 {
+		return nil, fmt.Errorf("status code error for %s: %d %s", stateURL, resp.StatusCode, resp.Status)
+	}
+
+	// Parse the HTML
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse HTML for %s: %w", stateURL, err)
+	}
+
+	var locations []Location
+
+	// Find all list items in the Directory-content
+	doc.Find(".Directory-content li.Directory-listItem").Each(func(i int, s *goquery.Selection) {
+		// Find the link within each list item
+		link := s.Find("a.Directory-listLink")
+
+		// Extract the href attribute
+		href, exists := link.Attr("href")
+		if !exists {
+			return
+		}
+
+		// Extract the data-count attribute
+		dataCountStr, exists := link.Attr("data-count")
+		if !exists {
+			return
+		}
+
+		// Parse data-count: remove parentheses and convert to int
+		dataCountStr = strings.Trim(dataCountStr, "()")
+		dataCount, err := strconv.Atoi(dataCountStr)
+		if err != nil {
+			log.Printf("Warning: failed to parse data-count '%s' for %s: %v", dataCountStr, href, err)
+			dataCount = 0
+		}
+
+		// Extract the place name
+		placeName := strings.TrimSpace(link.Find(".Directory-listLinkText").Text())
+
+		// Create full URL (relative to base)
+		fullURL := fmt.Sprintf("https://locations.kfc.com/%s", href)
+
+		locations = append(locations, Location{
+			URL:       fullURL,
+			DataCount: dataCount,
+			PlaceName: placeName,
+			StateCode: stateCode,
+		})
+	})
+
+	return locations, nil
 }
 
 func main() {
-	// URL to scrape
-	baseURL := "https://locations.kfc.com"
-	url := "https://locations.kfc.com/ma"
-
-	// Make HTTP request
-	resp, err := http.Get(url)
-	if err != nil {
-		log.Fatalf("Failed to fetch URL: %v", err)
-	}
-	defer resp.Body.Close()
-
-	// Check if request was successful
-	if resp.StatusCode != 200 {
-		log.Fatalf("Failed to fetch page: status code %d", resp.StatusCode)
+	// All 48 continental US state abbreviations (excluding Alaska and Hawaii)
+	states := []string{
+		"al", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "id",
+		"il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "mi",
+		"mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny",
+		"nc", "nd", "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn",
+		"tx", "ut", "vt", "va", "wa", "wv", "wi", "wy",
 	}
 
-	// Parse the HTML
-	doc, err := goquery.NewDocumentFromReader(resp.Body)
-	if err != nil {
-		log.Fatalf("Failed to parse HTML: %v", err)
-	}
+	// Channel to collect all locations
+	locationsChan := make(chan []Location, len(states))
+	var wg sync.WaitGroup
 
-	fmt.Println("Extracting location links from KFC Massachusetts page...")
-	fmt.Println(strings.Repeat("=", 80))
+	// Process each state in parallel
+	for _, state := range states {
+		wg.Add(1)
+		go func(stateCode string) {
+			defer wg.Done()
 
-	// Collect all location URLs
-	var locationURLs []string
-	doc.Find("a.Directory-listLink").Each(func(i int, s *goquery.Selection) {
-		href, exists := s.Attr("href")
-		if exists {
-			// Build full URL
-			fullURL := baseURL + href
-			locationURLs = append(locationURLs, fullURL)
-		}
-	})
+			url := fmt.Sprintf("https://locations.kfc.com/%s", stateCode)
+			fmt.Printf("Fetching locations for %s...\n", strings.ToUpper(stateCode))
 
-	fmt.Printf("Found %d locations. Fetching addresses...\n\n", len(locationURLs))
-
-	// Visit each location and extract address
-	locations := make([]Location, 0, len(locationURLs))
-	for i, locURL := range locationURLs {
-		fmt.Printf("[%d/%d] Fetching: %s\n", i+1, len(locationURLs), locURL)
-
-		location := fetchLocationDetails(locURL)
-		if location != nil {
-			locations = append(locations, *location)
-			fmt.Printf("✓ Address: %s\n", location.Address)
-			if location.City != "" {
-				fmt.Printf("  City: %s, %s %s\n", location.City, location.State, location.Zip)
+			locations, err := getLocationsOnStatePage(url, stateCode)
+			if err != nil {
+				log.Printf("Error fetching %s: %v", stateCode, err)
+				return
 			}
-		} else {
-			fmt.Printf("✗ Failed to fetch address\n")
-		}
-		fmt.Println()
 
-		// Be polite - add small delay between requests
-		time.Sleep(500 * time.Millisecond)
+			locationsChan <- locations
+			fmt.Printf("✓ Found %d locations in %s\n", len(locations), strings.ToUpper(stateCode))
+		}(state)
+	}
+
+	// Wait for all goroutines to complete
+	go func() {
+		wg.Wait()
+		close(locationsChan)
+	}()
+
+	// Collect all locations
+	var allLocations []Location
+	for locations := range locationsChan {
+		allLocations = append(allLocations, locations...)
 	}
 
 	// Print summary
+	fmt.Println("\n" + strings.Repeat("=", 80))
+	fmt.Printf("SUMMARY: Found %d total locations across %d states\n", len(allLocations), len(states))
 	fmt.Println(strings.Repeat("=", 80))
-	fmt.Println("SUMMARY")
-	fmt.Println(strings.Repeat("=", 80))
-	for i, loc := range locations {
-		fmt.Printf("%d. %s\n", i+1, loc.Address)
-		if loc.City != "" {
-			fmt.Printf("   %s, %s %s\n", loc.City, loc.State, loc.Zip)
+
+	// Print first 10 locations as examples
+	fmt.Println("\nFirst 10 locations:")
+	for i, loc := range allLocations {
+		if i >= 10 {
+			break
 		}
-		fmt.Printf("   URL: %s\n\n", loc.URL)
-	}
-	fmt.Printf("Total addresses collected: %d/%d\n", len(locations), len(locationURLs))
-}
-
-func fetchLocationDetails(url string) *Location {
-	// Make HTTP request
-	resp, err := http.Get(url)
-	if err != nil {
-		log.Printf("Error fetching %s: %v", url, err)
-		return nil
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != 200 {
-		log.Printf("Failed to fetch %s: status code %d", url, resp.StatusCode)
-		return nil
+		fmt.Printf("%d. %s (%s) - Count: %d\n   URL: %s\n",
+			i+1, loc.PlaceName, strings.ToUpper(loc.StateCode), loc.DataCount, loc.URL)
 	}
 
-	// Parse the HTML
-	doc, err := goquery.NewDocumentFromReader(resp.Body)
-	if err != nil {
-		log.Printf("Error parsing HTML from %s: %v", url, err)
-		return nil
+	// Print statistics by state
+	fmt.Println("\nLocations by state:")
+	stateCounts := make(map[string]int)
+	for _, loc := range allLocations {
+		stateCounts[loc.StateCode]++
 	}
-
-	location := &Location{URL: url}
-
-	// Extract street address
-	doc.Find(".c-AddressRow .c-address-street-1").Each(func(i int, s *goquery.Selection) {
-		location.Address = strings.TrimSpace(s.Text())
-	})
-
-	// Extract city, state, zip
-	doc.Find(".c-address-city").Each(func(i int, s *goquery.Selection) {
-		location.City = strings.TrimSpace(s.Text())
-	})
-
-	doc.Find(".c-address-state").Each(func(i int, s *goquery.Selection) {
-		location.State = strings.TrimSpace(s.Text())
-	})
-
-	doc.Find(".c-address-postal-code").Each(func(i int, s *goquery.Selection) {
-		location.Zip = strings.TrimSpace(s.Text())
-	})
-
-	// If no address found, return nil
-	if location.Address == "" {
-		return nil
+	for _, state := range states {
+		if count, exists := stateCounts[state]; exists {
+			fmt.Printf("  %s: %d locations\n", strings.ToUpper(state), count)
+		}
 	}
-
-	return location
 }
