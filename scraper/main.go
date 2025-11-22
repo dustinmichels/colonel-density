@@ -9,6 +9,16 @@ import (
 	"sync"
 )
 
+// printGreen prints text in green color
+func printGreen(format string, args ...interface{}) {
+	fmt.Printf("\033[32m"+format+"\033[0m", args...)
+}
+
+// printRed prints text in red color
+func printRed(format string, args ...interface{}) {
+	fmt.Printf("\033[31m"+format+"\033[0m", args...)
+}
+
 func main() {
 	// All 48 continental US state abbreviations (excluding Alaska and Hawaii)
 	states := []string{
@@ -18,9 +28,6 @@ func main() {
 		"nc", "nd", "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn",
 		"tx", "ut", "vt", "va", "wa", "wv", "wi", "wy",
 	}
-
-	// get the first two
-	states = states[:2]
 
 	// Channels to collect all cities and locations
 	citiesChan := make(chan []City, len(states))
@@ -53,12 +60,12 @@ func main() {
 				locations, err := getLocationsFromCity(city.URL)
 				if err != nil {
 					log.Printf("  Error fetching locations from %s: %v", city.URL, err)
-					fmt.Printf("    ✗ Failed to get locations\n")
+					printRed("    ✗ Failed to get locations\n")
 					continue
 				}
 
 				// Report success with expected vs actual count
-				fmt.Printf("    ✓ Successfully got %d/%d locations\n", len(locations), city.DataCount)
+				printGreen("    ✓ Successfully got %d/%d locations\n", len(locations), city.DataCount)
 
 				if len(locations) != city.DataCount {
 					log.Printf("  Warning: Expected %d locations but got %d for %s",
