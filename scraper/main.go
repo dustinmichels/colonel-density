@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/csv"
 	"fmt"
 	"log"
+	"os"
 	"strings"
 	"sync"
 )
@@ -79,4 +81,34 @@ func main() {
 			fmt.Printf("  %s: %d cities\n", strings.ToUpper(state), count)
 		}
 	}
+
+	// ----- Write CSV file -----
+	os.MkdirAll("out", 0755)
+
+	file, err := os.Create("out/cities.csv")
+	if err != nil {
+		log.Fatalf("Failed to create CSV file: %v", err)
+	}
+	defer file.Close()
+
+	writer := csv.NewWriter(file)
+	defer writer.Flush()
+
+	// CSV header
+	writer.Write([]string{"place_name", "state_code", "data_count", "url"})
+
+	// CSV rows
+	for _, city := range allCities {
+		record := []string{
+			city.PlaceName,
+			strings.ToUpper(city.StateCode),
+			fmt.Sprintf("%d", city.DataCount),
+			city.URL,
+		}
+		writer.Write(record)
+	}
+
+	fmt.Println("\nSaved CSV to out/cities.csv")
+	// -------------------------
+
 }
