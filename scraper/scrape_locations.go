@@ -17,8 +17,8 @@ type Location struct {
 	State     string
 	ZipCode   string
 	Country   string
-	Latitude  float64
-	Longitude float64
+	Latitude  *float64
+	Longitude *float64
 }
 
 // getLocationsFromCity fetches and parses a city page to extract location data
@@ -66,12 +66,12 @@ func parseLocationFormat1(s *goquery.Selection, doc *goquery.Document) Location 
 	// Extract coordinates from meta tags
 	if lat, exists := s.Find("meta[itemprop='latitude']").Attr("content"); exists {
 		if latFloat, err := strconv.ParseFloat(lat, 64); err == nil {
-			loc.Latitude = latFloat
+			loc.Latitude = &latFloat
 		}
 	}
 	if lon, exists := s.Find("meta[itemprop='longitude']").Attr("content"); exists {
 		if lonFloat, err := strconv.ParseFloat(lon, 64); err == nil {
-			loc.Longitude = lonFloat
+			loc.Longitude = &lonFloat
 		}
 	}
 
@@ -151,9 +151,7 @@ func parseLocationFormat2(s *goquery.Selection) Location {
 	// Country
 	loc.Country = strings.TrimSpace(addressBlock.Find(".c-address-country-name").Text())
 
-	// No coordinates available in this format
-	loc.Latitude = 0
-	loc.Longitude = 0
+	// Coordinates will be nil if not available
 
 	return loc
 }

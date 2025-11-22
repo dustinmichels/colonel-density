@@ -19,6 +19,9 @@ func main() {
 		"tx", "ut", "vt", "va", "wa", "wv", "wi", "wy",
 	}
 
+	// get the first two
+	states = states[:2]
+
 	// Channels to collect all cities and locations
 	citiesChan := make(chan []City, len(states))
 	locationsChan := make(chan []Location, len(states)*100) // Larger buffer for locations
@@ -160,6 +163,17 @@ func main() {
 
 	// CSV rows
 	for _, loc := range allLocations {
+		// Handle nullable latitude and longitude
+		latStr := ""
+		if loc.Latitude != nil {
+			latStr = fmt.Sprintf("%.8f", *loc.Latitude)
+		}
+
+		lonStr := ""
+		if loc.Longitude != nil {
+			lonStr = fmt.Sprintf("%.8f", *loc.Longitude)
+		}
+
 		record := []string{
 			loc.Name,
 			loc.Address,
@@ -167,8 +181,8 @@ func main() {
 			loc.State,
 			loc.ZipCode,
 			loc.Country,
-			fmt.Sprintf("%.8f", loc.Latitude),
-			fmt.Sprintf("%.8f", loc.Longitude),
+			latStr,
+			lonStr,
 		}
 		locationWriter.Write(record)
 	}
