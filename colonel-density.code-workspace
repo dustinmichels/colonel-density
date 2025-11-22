@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "[root]",
+      "path": "."
+    },
+    {
+      "name": "scraper",
+      "path": "scraper"
+    },
+    {
+      "name": "process",
+      "path": "process"
+    }
+  ],
+  "settings": {}
+}
