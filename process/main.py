@@ -1,8 +1,8 @@
 import os
-import time
 
 import pandas as pd
-from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
+from geopy.exc import GeocoderTimedOut
+from geopy.extra.rate_limiter import RateLimiter
 from geopy.geocoders import Nominatim
 from rich.console import Console
 
@@ -11,6 +11,9 @@ console = Console()
 INPUT_FILE = "data/locations.csv"
 OUTPUT_FILE = "data/locations_updated.csv"
 SAVE_EVERY = 5  # save every N successful geocodes
+SEARCH_AGAIN = (
+    True  # If True, re-search previously searched entries; If False, skip them
+)
 
 # ---------------------------
 # Load existing progress first
@@ -42,30 +45,15 @@ if "full_address" not in df.columns:
         + df["country"].astype(str)
     )
 
-geolocator = Nominatim(user_agent="kfc_geocoder")
-TIMEOUT = 3
-RETRIES = 5
-DELAY = 1.2
+geolocator = Nominatim(user_agent="kfc_geocoder", timeout=5)
 
-
-def safe_geocode(address):
-    for attempt in range(1, RETRIES + 1):
-        try:
-            geo = geolocator.geocode(address, timeout=TIMEOUT)
-            if geo:
-                return geo
-            else:
-                console.print("[yellow]  No result found for address.[/yellow]")
-                return None
-        except (GeocoderTimedOut, GeocoderUnavailable):
-            console.print(
-                f"[red]  Timeout (attempt {attempt}/{RETRIES}) — retrying...[/red]"
-            )
-            time.sleep(2)
-        except Exception as e:
-            console.print(f"[red]  Unexpected error: {e}[/red]")
-            return None
-    return None
+# Use RateLimiter for automatic rate limiting and retries
+geocode = RateLimiter(
+    geolocator.geocode,
+    min_delay_seconds=1,  # Nominatim requires 1 second minimum
+    max_retries=3,
+    error_wait_seconds=2,
+)
 
 
 def save_progress(df, filename):
@@ -73,21 +61,25 @@ def save_progress(df, filename):
     console.print(f"[green]Progress saved to[/green] {filename}")
 
 
+def get_remaining(df):
+    if SEARCH_AGAIN:
+        return df[(df["latitude"].isna() | df["longitude"].isna())]
+    else:
+        return df[
+            (df["latitude"].isna() | df["longitude"].isna()) & (df["searched"] == False)
+        ]
+
+
 def get_remaining_count(df):
-    return len(
-        df[(df["latitude"].isna() | df["longitude"].isna()) & (df["searched"] == False)]
-    )
+    return len(get_remaining(df))
 
 
 # ---------------------------
 # MAIN LOOP
 # ---------------------------
 
-# Only process rows that are missing lat/lon AND haven't been searched yet
-missing = df[
-    (df["latitude"].isna() | df["longitude"].isna()) & (df["searched"] == False)
-]
-
+# Filter based on SEARCH_AGAIN setting
+missing = get_remaining(df)
 
 console.print(
     f"[bold green]Starting geocoding:[/bold green] {len(missing)} remaining / {len(df)} total"
@@ -98,12 +90,17 @@ save_counter = 0
 for idx, row in missing.iterrows():
     console.print(f"[blue]Geocoding: {row['full_address']}[/blue]")
 
-    location = safe_geocode(row["full_address"])
+    try:
+        location = geocode(row["full_address"])
+    except GeocoderTimedOut:
+        console.print("[red]  Error: Geocoder timed out[/red]")
+        location = None
+    except Exception as e:
+        console.print(f"[red]  Error: {e}[/red]")
+        location = None
 
     # Mark as searched regardless of result
     df.at[idx, "searched"] = True
-
-    time.sleep(DELAY)
 
     if location:
         df.at[idx, "latitude"] = location.latitude
@@ -123,7 +120,7 @@ for idx, row in missing.iterrows():
             save_counter = 0
 
     else:
-        console.print("[red]  → Not found (marked as searched)[/red]")
+        console.print("[yellow]  → Not found (marked as searched)[/yellow]")
 
 # Final save
 save_progress(df, OUTPUT_FILE)

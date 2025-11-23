@@ -1,0 +1,213 @@
+name,address,city,state,zip_code,country,latitude,longitude,searched
+KFC 1620 Second Avenue Southwest,1620 Second Avenue Southwest,Cullman,AL,35055,US,,,True
+KFC 5799 Alabama Highway 157,5799 Alabama Highway 157,Cullman,AL,35058,US,,,True
+KFC 109 N.E. Ross Clark Circle,109 N.E. Ross Clark Circle,Dothan,AL,36303,US,,,True
+KFC 1801 S.E. Ross Clark Circle,1801 S.E. Ross Clark Circle,Dothan,AL,36301,US,,,True
+KFC 7874 Highway 72 West,7874 Highway 72 West,Madison,AL,35758,US,,,True
+KFC 5437 Highway 90 W,5437 Highway 90 W,Mobile,AL,36619,US,,,True
+KFC 1101 Lurleen Wallace Boulevard South,1101 Lurleen Wallace Boulevard South,Tuscaloosa,AL,35401,US,,,True
+KFC 3050 Service Road I-55,3050 Service Road I-55,Marion,AR,72364,US,,,True
+KFC 3350 N. Stockton Hill,3350 N. Stockton Hill,Kingman,AZ,86409,US,,,True
+KFC 3225 East Rincon Road,3225 East Rincon Road,Littlefield,AZ,86432,US,,,True
+KFC 11183 S. Frontage Drive,11183 S. Frontage Drive,Yuma,AZ,85367,US,,,True
+KFC 12042 Valley View Blvd,12042 Valley View Blvd,Garden Grove,CA,92845,US,,,True
+KFC 81769 US Highway 111,81769 US Highway 111,Indio,CA,92201,US,,,True
+KFC 1601 East Seventh Street,1601 East Seventh Street,Long Beach,CA,90813,US,,,True
+KFC 5925 West Third Street,5925 West Third Street,Los Angeles,CA,90036,US,,,True
+KFC 2050 Fair Oaks Boulevard,2050 Fair Oaks Boulevard,Pasadena,CA,91103,US,,,True
+KFC 1695 Hollenbeck Road,1695 Hollenbeck Road,Sunnyvale,CA,94087,US,,,True
+KFC 16502 South Crenshaw Boulevard,16502 South Crenshaw Boulevard,Torrance,CA,90504,US,,,True
+KFC 14284 Outer 7th Street,14284 Outer 7th Street,Victorville,CA,92395,US,,,True
+KFC 9185 North Federal Boulevard,9185 North Federal Boulevard,Westminster,CO,80260,US,,,True
+KFC 4301 North Main Street,4301 North Main Street,Bridgeport,CT,6606,US,,,True
+KFC 525 First Street East,525 First Street East,Bradenton,FL,34208,US,,,True
+KFC 6440 E. State Road 64,6440 E. State Road 64,Bradenton,FL,34208,US,,,True
+KFC 510 U.S. Hwy 27,510 U.S. Hwy 27,Clermont,FL,34714,US,,,True
+KFC 590 E. South Highway 50,590 E. South Highway 50,Clermont,FL,34711,US,,,True
+KFC 14470 So. Military Trail,14470 So. Military Trail,Delray Beach,FL,33484,US,,,True
+KFC 405 South Fourth Street,405 South Fourth Street,Fort Pierce,FL,34950,US,,,True
+KFC Newell Dr & Stadium Rd,Newell Dr & Stadium Rd,Gainesville,FL,32611,US,,,True
+KFC 6712 Forest Hills Blvd,6712 Forest Hills Blvd,Greenacres,FL,33413,US,,,True
+KFC 30010 S. Federal Hwy,30010 S. Federal Hwy,Homestead,FL,33033,US,,,True
+KFC 1907 W. Irlo Bronson Hwy,1907 W. Irlo Bronson Hwy,Kissimmee,FL,34741,US,,,True
+KFC 1924 E Irlo Bronson Memorial Hwy,1924 E Irlo Bronson Memorial Hwy,Kissimmee,FL,34744,US,,,True
+KFC 3185 S. John Young Parkway,3185 S. John Young Parkway,Kissimmee,FL,34746,US,,,True
+KFC 3630 U.S. Highway 98 N,3630 U.S. Highway 98 N,Lakeland,FL,33809,US,,,True
+KFC 3515 N.W. Seventh Avenue,3515 N.W. Seventh Avenue,Miami,FL,33127,US,,,True
+KFC 4200 NW 21 Street,4200 NW 21 Street,Miami,FL,33122,US,,,True
+KFC 4200 NW 21 Street Mia Terminal 5 Pre-S,4200 NW 21 Street Mia Terminal 5 Pre-S,Miami,FL,33122,US,,,True
+KFC 4312 U.S. Highway 19,4312 U.S. Highway 19,New Port Richey,FL,34652,US,,,True
+KFC 13801 North East Biscayne Boulevard,13801 North East Biscayne Boulevard,North Miami Beach,FL,33181,US,,,True
+KFC 13545 S.W. 17th Court,13545 S.W. 17th Court,Ocala,FL,34473,US,,,True
+KFC 3325 NW Pine Avenue,3325 NW Pine Avenue,Ocala,FL,34475,US,,,True
+KFC Mile Post 263,Mile Post 263,Ocoee,FL,34761,US,,,True
+KFC Mile Post 263,Mile Post 263,Ocoee,FL,34761,US,,,True
+KFC 3387 Highway 441 South,3387 Highway 441 South,Okeechobee,FL,34974,US,,,True
+KFC Mile Marker 184,Mile Marker 184,Okeechobee,FL,34972,US,,,True
+KFC Mile Marker 184,Mile Marker 184,Okeechobee,FL,34972,US,,,True
+KFC 426 East Michigan Street,426 East Michigan Street,Orlando,FL,32806,US,,,True
+KFC 5200 S John Young Parkway,5200 S John Young Parkway,Orlando,FL,32839,US,,,True
+KFC 6217 International Rd,6217 International Rd,Orlando,FL,32819,US,,,True
+KFC 1641 N.W. Saint Lucie West Boulevard,1641 N.W. Saint Lucie West Boulevard,Port Saint Lucie,FL,34986,US,,,True
+KFC 246 S.W. Port St. Lucie Boulevard,246 S.W. Port St. Lucie Boulevard,Port Saint Lucie,FL,34984,US,,,True
+KFC 2515 County Road 208,2515 County Road 208,Saint Augustine,FL,32084,US,,,True
+KFC 6300 Ninth Street N,6300 Ninth Street N,Saint Petersburg,FL,33702,US,,,True
+KFC Mile Post 94,Mile Post 94,West Palm Beach,FL,33414,US,,,True
+KFC Mile Post 94,Mile Post 94,West Palm Beach,FL,33414,US,,,True
+KFC Mile Post 299 Florida Turnpike,Mile Post 299 Florida Turnpike,Wildwood,FL,34785,US,,,True
+KFC Mile Post 299 Florida Turnpike,Mile Post 299 Florida Turnpike,Wildwood,FL,34785,US,,,True
+KFC 23 Joseph E Lowery Blvd. SW,23 Joseph E Lowery Blvd. SW,Atlanta,GA,30314,US,,,True
+KFC 3510 Cascade Rd. SW,3510 Cascade Rd. SW,Atlanta,GA,30331,US,,,True
+KFC 3901 Buford Hwy NE,3901 Buford Hwy NE,Atlanta,GA,30329,US,,,True
+KFC 2029 Windsor Springs Road,2029 Windsor Springs Road,Augusta,GA,30906,US,,,True
+KFC 3750 Sixes Road,3750 Sixes Road,Canton,GA,30114,US,,,True
+KFC 1675 Highway 138 SE,1675 Highway 138 SE,Conyers,GA,30013,US,,,True
+KFC 2182 Highway 441 South,2182 Highway 441 South,Dublin,GA,31021,US,,,True
+KFC 675 Georgia Highway 120,675 Georgia Highway 120,Lawrenceville,GA,30045,US,,,True
+KFC 1130 Powder Spring Road,1130 Powder Spring Road,Marietta,GA,30064,US,,,True
+KFC 11502 Abercorn Extension,11502 Abercorn Extension,Savannah,GA,31419,US,,,True
+KFC 19 Mersy Way,19 Mersy Way,Savannah,GA,31405,US,,,True
+KFC 405 W. Gwinnet Street,405 W. Gwinnet Street,Savannah,GA,31401,US,,,True
+KFC 102 Highway 138 W,102 Highway 138 W,Stockbridge,GA,30281,US,,,True
+KFC 1334 Edgewood Road South West,1334 Edgewood Road South West,Cedar Rapids,IA,52404,US,,,True
+KFC 1341 First Avenue SE,1341 First Avenue SE,Cedar Rapids,IA,52402,US,,,True
+KFC 10556 South Indianapolis,10556 South Indianapolis,Chicago,IL,60617,US,,,True
+KFC 4120 S. Calumet Avenue,4120 S. Calumet Avenue,Hammond,IN,46320,US,,,True
+KFC 1426 East Tenth Street,1426 East Tenth Street,Jeffersonville,IN,47130,US,,,True
+KFC 5501 Highway 62,5501 Highway 62,Jeffersonville,IN,47130,US,,,True
+KFC 241 U.S. Highway 6 S,241 U.S. Highway 6 S,Ligonier,IN,46767,US,,,True
+"KFC 241 U.S. Highway 6, S","241 U.S. Highway 6, S",Ligonier,IN,46767,US,,,True
+KFC 3924 N. Portage Road,3924 N. Portage Road,South Bend,IN,46628,US,,,True
+KFC 3211 SW Topeka Avenue,3211 SW Topeka Avenue,Topeka,KS,66611,US,,,True
+KFC 160 Russell Rd,160 Russell Rd,Ashland,KY,41102,US,,,True
+KFC 9309 U.S. Highway 60,9309 U.S. Highway 60,Ashland,KY,41102,US,,,True
+KFC 1201 US 31W Byp,1201 US 31W Byp,Bowling Green,KY,42101,US,,,True
+KFC 435 West Dixie Highway,435 West Dixie Highway,Elizabethtown,KY,42701,US,,,True
+KFC 5975 Centennial Circle,5975 Centennial Circle,Florence,KY,41042,US,,,True
+KFC 8055 U.S. 42,8055 U.S. 42,Florence,KY,41042,US,,,True
+KFC 1229 U. S. Highway 127 S,1229 U. S. Highway 127 S,Frankfort,KY,40601,US,,,True
+KFC 1911 W Broadway St,1911 W Broadway St,Louisville,KY,40203,US,,,True
+KFC One Arena Plaza,One Arena Plaza,Louisville,KY,40202,US,,,True
+KFC One Arena Plaza,One Arena Plaza,Louisville,KY,40202,US,,,True
+KFC One Arena Plaza,One Arena Plaza,Louisville,KY,40203,US,,,True
+KFC 28 Weddington Branch Road,28 Weddington Branch Road,Pikeville,KY,41501,US,,,True
+KFC 3663 General Degaulle Dr,3663 General Degaulle Dr,New Orleans,LA,70114,US,,,True
+KFC 125 East Bert Kouns,125 East Bert Kouns,Shreveport,LA,71106,US,,,True
+KFC I-95 At Mile Marker 96.8,I-95 At Mile Marker 96.8,North East,MD,21901,US,,,True
+KFC I-95 At Mile Marker 96.8,I-95 At Mile Marker 96.8,North East,MD,21901,US,,,True
+KFC 5785 S.W. Crain Highway,5785 S.W. Crain Highway,Upper Marlboro,MD,20772,US,,,True
+KFC 603 Broadway Street,603 Broadway Street,Bangor,ME,4401,US,,,True
+KFC 1405 Capitol Avenue N.E,1405 Capitol Avenue N.E,Battle Creek,MI,49017,US,,,True
+KFC 3785 Gratiot St,3785 Gratiot St,Detroit,MI,48207,US,,,True
+KFC 4040 Plainfield Avenue N.E,4040 Plainfield Avenue N.E,Grand Rapids,MI,49525,US,,,True
+KFC 2856 28th Street S.E,2856 28th Street S.E,Kentwood,MI,49512,US,,,True
+KFC 1191 N. U.S. Highway 31,1191 N. U.S. Highway 31,Petoskey,MI,49770,US,,,True
+KFC 1191 N. U.S. Highway 31,1191 N. U.S. Highway 31,Petoskey,MI,49770,US,,,True
+KFC 25551 Five Mile Road,25551 Five Mile Road,Redford,MI,48239,US,,,True
+KFC 13785 Thirteen Mile Road,13785 Thirteen Mile Road,Warren,MI,48088,US,,,True
+KFC 1516 28th Street S.W,1516 28th Street S.W,Wyoming,MI,49509,US,,,True
+KFC 2510 56th Street S.W,2510 56th Street S.W,Wyoming,MI,49418,US,,,True
+KFC 1510 2nd Street S.W,1510 2nd Street S.W,Rochester,MN,55902,US,,,True
+KFC 717 12th Street South East,717 12th Street South East,Rochester,MN,55904,US,,,True
+KFC 211 Highway 7 South,211 Highway 7 South,Blue Springs,MO,64014,US,,,True
+KFC 17837 East 24 Highway,17837 East 24 Highway,Independence,MO,64056,US,,,True
+KFC 1808 W. Battlefield Street,1808 W. Battlefield Street,Springfield,MO,65807,US,,,True
+KFC 800 Fairview Road River Ridge Market Place,800 Fairview Road River Ridge Market Place,Asheville,NC,28803,US,,,True
+KFC 6813 E. Wilkinson Boulevard,6813 E. Wilkinson Boulevard,Belmont,NC,28012,US,,,True
+KFC 6813 E. Wilkinson Boulevard,6813 E. Wilkinson Boulevard,Belmont,NC,28012,US,,,True
+KFC 12340 State Highway 210,12340 State Highway 210,Benson,NC,27504,US,,,True
+KFC 12340 State Highway 210,12340 State Highway 210,Benson,NC,27504,US,,,True
+KFC 1544 Highway 56,1544 Highway 56,Creedmoor,NC,27522,US,,,True
+KFC 1544 Highway 56,1544 Highway 56,Creedmoor,NC,27522,US,,,True
+KFC 1110 W. NC 54,1110 W. NC 54,Durham,NC,27707,US,,,True
+KFC 1110 W. NC 54,1110 W. NC 54,Durham,NC,27707,US,,,True
+KFC 5080 NC Highway 87 South,5080 NC Highway 87 South,Fayetteville,NC,28306,US,,,True
+KFC 1599 US Highway 70 W,1599 US Highway 70 W,Garner,NC,27529,US,,,True
+KFC 5530 North Carolina Highway 42,5530 North Carolina Highway 42,Garner,NC,27529,US,,,True
+KFC 5530 North Carolina Highway 42,5530 North Carolina Highway 42,Garner,NC,27529,US,,,True
+KFC 2000 South East Greenville Boulevard,2000 South East Greenville Boulevard,Greenville,NC,27858,US,,,True
+KFC 600 West Greenville Boulevard,600 West Greenville Boulevard,Greenville,NC,27834,US,,,True
+KFC 7108 G. B. Alford Highway,7108 G. B. Alford Highway,Holly Springs,NC,27540,US,,,True
+KFC 7108 G. B. Alford Highway,7108 G. B. Alford Highway,Holly Springs,NC,27540,US,,,True
+KFC 520 W. Second Street,520 W. Second Street,Lumberton,NC,28358,US,,,True
+"KFC 1110 Highway 70, W","1110 Highway 70, W",Marion,NC,28752,US,,,True
+KFC 3334 South Highway 226,3334 South Highway 226,Marion,NC,28752,US,,,True
+KFC 115 College Ave,115 College Ave,Rutherfordton,NC,28139,US,,,True
+KFC 115 College Ave,115 College Ave,Rutherfordton,NC,28139,US,,,True
+KFC 901 Highway 301,901 Highway 301,Wilson,NC,27893,US,,,True
+KFC 161 Wakelon Drive,161 Wakelon Drive,Zebulon,NC,27597,US,,,True
+KFC 161 Wakelon Drive,161 Wakelon Drive,Zebulon,NC,27597,US,,,True
+KFC 1100 Route 9 South,1100 Route 9 South,Old Bridge,NJ,8857,US,,,True
+KFC 2650 County Road 516,2650 County Road 516,Old Bridge,NJ,8857,US,,,True
+KFC One Garden State Plaza,One Garden State Plaza,Paramus,NJ,7652,US,,,True
+KFC 12921 Central Avenue N.E,12921 Central Avenue N.E,Albuquerque,NM,87123,US,,,True
+KFC 4901 Gibson Blvd S.E,4901 Gibson Blvd S.E,Albuquerque,NM,87108,US,,,True
+KFC 5410 Fourth Street N.W,5410 Fourth Street N.W,Albuquerque,NM,87107,US,,,True
+KFC 6200 San Mateo Boulevard N.E,6200 San Mateo Boulevard N.E,Albuquerque,NM,87109,US,,,True
+KFC 1050 U.S. Highway 491,1050 U.S. Highway 491,Gallup,NM,87301,US,,,True
+KFC 1611 West Old Route 66,1611 West Old Route 66,Moriarty,NM,87035,US,,,True
+KFC 1611 West Old Route 66,1611 West Old Route 66,Moriarty,NM,87035,US,,,True
+KFC 1353 E Silverado Ranch Blvd,1353 E Silverado Ranch Blvd,Las Vegas,NV,89183,US,,,True
+KFC 3812 E Craig Road Food Court,3812 E Craig Road Food Court,North Las Vegas,NV,89030,US,,,True
+KFC 275 N McCarran St,275 N McCarran St,Sparks,NV,89431,US,,,True
+KFC 5219-5233 Fifth Avenue,5219-5233 Fifth Avenue,Brooklyn,NY,11220,US,,,True
+KFC 158-05 Union Turnpike,158-05 Union Turnpike,Flushing,NY,11366,US,,,True
+KFC 152-12 Rockaway Blvd,152-12 Rockaway Blvd,Jamaica,NY,11434,US,,,True
+KFC 1055 7th North Street,1055 7th North Street,Liverpool,NY,13088,US,,,True
+KFC 2303 West Tusc,2303 West Tusc,Canton,OH,44708,US,,,True
+KFC 3614 Harmont Avenue N.E,3614 Harmont Avenue N.E,Canton,OH,44705,US,,,True
+KFC 5210 Detroit Road,5210 Detroit Road,Elyria,OH,44035,US,,,True
+KFC 3904 W. Owen K. Garriot,3904 W. Owen K. Garriot,Enid,OK,73703,US,,,True
+KFC 702 East Main,702 East Main,Enid,OK,73701,US,,,True
+KFC 8 S.E. Lee Blvd,8 S.E. Lee Blvd,Lawton,OK,73501,US,,,True
+KFC 10190 SW Beaverton Hillsdale,10190 SW Beaverton Hillsdale,Beaverton,OR,97005,US,,,True
+KFC 7340 NW Butler Road,7340 NW Butler Road,Hillsboro,OR,97124,US,,,True
+KFC 5721 NE Martin Luther King,5721 NE Martin Luther King,Portland,OR,97211,US,,,True
+KFC 2525 Sixth Ave,2525 Sixth Ave,Altoona,PA,16602,US,,,True
+KFC 278 Yost Blvd,278 Yost Blvd,Pittsburgh,PA,15221,US,,,True
+KFC 241 Lancaster Pike West,241 Lancaster Pike West,Reading,PA,19607,US,,,True
+KFC 653 Highway 28 By-Pass,653 Highway 28 By-Pass,Anderson,SC,29624,US,,,True
+KFC 219 By Pass 72 NW,219 By Pass 72 NW,Greenwood,SC,29649,US,,,True
+KFC 1263 Great Falls Highway,1263 Great Falls Highway,Lancaster,SC,29720,US,,,True
+KFC 582 521 Bypass Hwy 9,582 521 Bypass Hwy 9,Lancaster,SC,29720,US,,,True
+KFC 1020 Glen Forest Road,1020 Glen Forest Road,Myrtle Beach,SC,29579,US,,,True
+KFC 4426 Jefferson Davis Highway,4426 Jefferson Davis Highway,North Augusta,SC,29841,US,,,True
+KFC 4630 W. Broad Street,4630 W. Broad Street,Sumter,SC,29154,US,,,True
+KFC 300 South Kiwanis,300 South Kiwanis,Sioux Falls,SD,57104,US,,,True
+KFC 2325 McGrady Drive S.E,2325 McGrady Drive S.E,Cleveland,TN,37323,US,,,True
+KFC 2978 Ridgecrest Rd Ext,2978 Ridgecrest Rd Ext,Jackson,TN,38305,US,,,True
+KFC 1030 Shumard Lane,1030 Shumard Lane,Knoxville,TN,37914,US,,,True
+KFC 2918 N. Broadway Street,2918 N. Broadway Street,Knoxville,TN,37917,US,,,True
+KFC 4549 Elvis Presley Highway,4549 Elvis Presley Highway,Memphis,TN,38116,US,,,True
+KFC 1027 8th Ave. N,1027 8th Ave. N,Nashville,TN,37208,US,,,True
+KFC 13435 US Hwy 183 North,13435 US Hwy 183 North,Austin,TX,78750,US,,,True
+KFC 14824 N I H 35,14824 N I H 35,Austin,TX,78728,US,,,True
+KFC 1907 E. Beltline Rd,1907 E. Beltline Rd,Carrollton,TX,75006,US,,,True
+KFC 20320 FM 529 Road,20320 FM 529 Road,Cypress,TX,77429,US,,,True
+KFC 301 East Highway 303,301 East Highway 303,Grand Prairie,TX,75051,US,,,True
+KFC 1300 Gulfgate Center Mall,1300 Gulfgate Center Mall,Houston,TX,77087,US,,,True
+KFC 14127 State Highway 249,14127 State Highway 249,Houston,TX,77086,US,,,True
+KFC 5010 Aldine Mail Rd,5010 Aldine Mail Rd,Houston,TX,77039,US,,,True
+KFC 3130 FM 1960 Rd. W,3130 FM 1960 Rd. W,Humble,TX,77338,US,,,True
+KFC 6829 Atascocita Rd,6829 Atascocita Rd,Humble,TX,77346,US,,,True
+KFC 9435 FM 1960 Road,9435 FM 1960 Road,Humble,TX,77338,US,,,True
+KFC 2920 W. Eldorado Parkway,2920 W. Eldorado Parkway,McKinney,TX,75070,US,,,True
+KFC 4727 N. Midkiff Drive,4727 N. Midkiff Drive,Midland,TX,79705,US,,,True
+KFC 5890 Kingstowne Center,5890 Kingstowne Center,Alexandria,VA,22315,US,,,True
+KFC 45960 Denizen Plaza Road,45960 Denizen Plaza Road,Sterling,VA,20165,US,,,True
+"KFC 34506 16th Avenue, S","34506 16th Avenue, S",Federal Way,WA,98003,US,,,True
+KFC 901 North Columbia Center Boulevard,901 North Columbia Center Boulevard,Kennewick,WA,99336,US,,,True
+"KFC 8030 Martin Way, E","8030 Martin Way, E",Lacey,WA,98516,US,,,True
+"KFC 12118 Meridian Street, East","12118 Meridian Street, East",Puyallup,WA,98373,US,,,True
+KFC 2819 E 29th Street,2819 E 29th Street,Spokane,WA,99223,US,,,True
+KFC 2006 Sixth Avenue,2006 Sixth Avenue,Tacoma,WA,98403,US,,,True
+KFC 7605 Steiliacoom Boulevard,7605 Steiliacoom Boulevard,Tacoma,WA,98498,US,,,True
+KFC 2325 S. First Street,2325 S. First Street,Yakima,WA,98903,US,,,True
+KFC 1609 West Shawano,1609 West Shawano,Green Bay,WI,54303,US,,,True
+KFC 12303 W. 75th Street,12303 W. 75th Street,Kenosha,WI,53142,US,,,True
+KFC 5350 Route 60 East,5350 Route 60 East,Huntington,WV,25705,US,,,True
+KFC 4158 State Route 34,4158 State Route 34,Hurricane,WV,25526,US,,,True
+KFC 5 Clear Mountain Way,5 Clear Mountain Way,Morgantown,WV,26505,US,,,True
+KFC 71 Tipple St,71 Tipple St,Morgantown,WV,26501,US,,,True
+KFC 930 Seventh Street,930 Seventh Street,Parkersburg,WV,26101,US,,,True
+KFC 2 Trace Fork Boulevard,2 Trace Fork Boulevard,South Charleston,WV,25309,US,,,True
