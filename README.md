@@ -13,7 +13,7 @@ cd scraper
 go run .
 ```
 
-Some stores have lat/lon. Some do not. So next I wrote a python script that attempts to geocode the addresses that are missing lat/lon using geopy.
+Some stores have lat/lon. Some do not. So next I wrote a python script that attempts to geocode the addresses that are missing lat/lon using geopy (Nominatim / OpenStreetMap).
 
 ```sh
 cd process
