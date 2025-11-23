@@ -24,6 +24,10 @@ else:
 # sort df by state, then city
 df = df.sort_values(by=["state", "city"]).reset_index(drop=True)
 
+# Add searched column if it doesn't exist
+if "searched" not in df.columns:
+    df["searched"] = False
+
 # Build full address if missing
 if "full_address" not in df.columns:
     df["full_address"] = (
@@ -39,7 +43,7 @@ if "full_address" not in df.columns:
     )
 
 geolocator = Nominatim(user_agent="kfc_geocoder")
-TIMEOUT = 10
+TIMEOUT = 3
 RETRIES = 5
 DELAY = 1.2
 
@@ -70,19 +74,23 @@ def save_progress(df, filename):
 
 
 def get_remaining_count(df):
-    return len(df[df["latitude"].isna() | df["longitude"].isna()])
+    return len(
+        df[(df["latitude"].isna() | df["longitude"].isna()) & (df["searched"] == False)]
+    )
 
 
 # ---------------------------
 # MAIN LOOP
 # ---------------------------
 
-missing = df[df["latitude"].isna() | df["longitude"].isna()]
-total_missing_start = len(missing)
-total_rows = len(df)
+# Only process rows that are missing lat/lon AND haven't been searched yet
+missing = df[
+    (df["latitude"].isna() | df["longitude"].isna()) & (df["searched"] == False)
+]
+
 
 console.print(
-    f"[bold green]Starting geocoding:[/bold green] {total_missing_start} remaining / {total_rows} total"
+    f"[bold green]Starting geocoding:[/bold green] {len(missing)} remaining / {len(df)} total"
 )
 
 save_counter = 0
@@ -91,6 +99,10 @@ for idx, row in missing.iterrows():
     console.print(f"[blue]Geocoding: {row['full_address']}[/blue]")
 
     location = safe_geocode(row["full_address"])
+
+    # Mark as searched regardless of result
+    df.at[idx, "searched"] = True
+
     time.sleep(DELAY)
 
     if location:
@@ -106,12 +118,12 @@ for idx, row in missing.iterrows():
         if save_counter >= SAVE_EVERY:
             save_progress(df, OUTPUT_FILE)
             console.print(
-                f"[cyan]---------- Progress saved ({get_remaining_count(df)} remaining / {total_rows}) ----------[/cyan]"
+                f"[cyan]---------- Progress saved ({get_remaining_count(df)} remaining / {len(df)}) ----------[/cyan]"
             )
             save_counter = 0
 
     else:
-        console.print("[red]  → Failed after retries[/red]")
+        console.print("[red]  → Not found (marked as searched)[/red]")
 
 # Final save
 save_progress(df, OUTPUT_FILE)
@@ -119,5 +131,5 @@ console.print(f"[bold green]Saved final file:[/bold green] {OUTPUT_FILE}")
 
 # final remaining count
 console.print(
-    f"[bold yellow]Done.[/bold yellow] {get_remaining_count(df)} entries remain un-geocoded out of {total_rows}."
+    f"[bold yellow]Done.[/bold yellow] {get_remaining_count(df)} entries remain un-geocoded out of {len(df)}."
 )
