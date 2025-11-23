@@ -713,12 +713,12 @@ KFC 2555 S. 175th Street,2555 S. 175th Street,Omaha,NE,68130,US,41.2352921,-96.1
 KFC 4802 L Street,4802 L Street,Omaha,NE,68117,US,41.2124648,-95.9861962
 KFC 6512 N. 72nd Street,6512 N. 72nd Street,Omaha,NE,68122,US,41.3181401,-96.0244547
 KFC 7601 North 30th Street,7601 North 30th Street,Omaha,NE,68112,US,41.3293968,-95.9581221
-KFC 8770 Maple Street,8770 Maple Street,Omaha,NE,68134,US,,
+KFC 8770 Maple Street,8770 Maple Street,Omaha,NE,68134,US,41.2855072,-96.0488261
 "Kentucky Fried Chicken - Cave City, KY - 812 Mammoth Cave Street",812 Mammoth Cave Street,Cave City,KY,42127,US,37.136736,-85.974604
 "Kentucky Fried Chicken - Bradley, IL - 118 South Kennedy",118 South Kennedy,Bradley,IL,60915,US,41.1432787,-87.87588778
 "Kentucky Fried Chicken - Bushnell, FL - 1969 W. County Road 48",1969 W. County Road 48,Bushnell,FL,33513,US,28.66833755,-82.13700462
-KFC 420 Broad St,420 Broad St,Providence,RI,2907,US,,
-KFC 805 North Main,805 North Main,Providence,RI,2904,US,,
+KFC 420 Broad St,420 Broad St,Providence,RI,2907,US,41.8121994,-71.4213411
+KFC 805 North Main,805 North Main,Providence,RI,2904,US,41.841809,-71.407792
 "Kentucky Fried Chicken - Magna, UT - 3544 South 8400 West",3544 South 8400 West,Magna,UT,84044,US,40.69513845,-112.0924039
 "Kentucky Fried Chicken - East Wareham, MA - 3015 Cranberry Hwy",3015 Cranberry Hwy,East Wareham,MA,2538,US,41.758098,-70.660615
 "Kentucky Fried Chicken - East Windsor, NJ - 40 Princeton-Hightstown Road",40 Princeton-Hightstown Road,East Windsor,NJ,8520,US,40.27468946,-74.54041748
@@ -731,39 +731,39 @@ KFC 805 North Main,805 North Main,Providence,RI,2904,US,,
 KFC 1620 Second Avenue Southwest,1620 Second Avenue Southwest,Cullman,AL,35055,US,,
 KFC 5799 Alabama Highway 157,5799 Alabama Highway 157,Cullman,AL,35058,US,,
 "Kentucky Fried Chicken - Conway, AR - 2670 Donaghey Street",2670 Donaghey Street,Conway,AR,72032,US,35.11178515,-92.44786546
-KFC 10037 Broadview Road,10037 Broadview Road,Broadview Heights,OH,44147,US,,
-KFC 2000 W Edgerton Road,2000 W Edgerton Road,Broadview Heights,OH,44147,US,,
-KFC 1012 West Kimberly,1012 West Kimberly,Davenport,IA,52806,US,,
-KFC 208 W. Locust Street,208 W. Locust Street,Davenport,IA,52803,US,,
-KFC 3843 Elmore Ave,3843 Elmore Ave,Davenport,IA,52807,US,,
+KFC 10037 Broadview Road,10037 Broadview Road,Broadview Heights,OH,44147,US,41.2914819,-81.6755729
+KFC 2000 W Edgerton Road,2000 W Edgerton Road,Broadview Heights,OH,44147,US,41.2914311,-81.67573
+KFC 1012 West Kimberly,1012 West Kimberly,Davenport,IA,52806,US,41.560633,-90.5862034
+KFC 208 W. Locust Street,208 W. Locust Street,Davenport,IA,52803,US,41.5385402,-90.5760689
+KFC 3843 Elmore Ave,3843 Elmore Ave,Davenport,IA,52807,US,41.5569254,-90.5265496
 "Kentucky Fried Chicken - Columbia, MS - 787 U.S. Highway 98 Bypass",787 U.S. Highway 98 Bypass,Columbia,MS,39429,US,31.238774,-89.820731
 "Kentucky Fried Chicken - Craig, CO - 707 West Victory Way",707 West Victory Way,Craig,CO,81625,US,40.51441174,-107.55609834
 "Kentucky Fried Chicken - Grants Pass, OR - 280 NE Beacon Drive",280 NE Beacon Drive,Grants Pass,OR,97526,US,42.43831418,-123.30991649
-KFC 41 Prospect Hill Rd,41 Prospect Hill Rd,East Windsor,CT,6088,US,,
-KFC 41 Prospect Hill Rd,41 Prospect Hill Rd,East Windsor,CT,6088,US,,
+KFC 41 Prospect Hill Rd,41 Prospect Hill Rd,East Windsor,CT,6088,US,41.9183557,-72.6107891
+KFC 41 Prospect Hill Rd,41 Prospect Hill Rd,East Windsor,CT,6088,US,41.9183557,-72.6107891
 "Kentucky Fried Chicken - Paris, ME - 57 Main Street",57 Main Street,Paris,ME,4281,US,44.22140946,-70.5161661
 "Kentucky Fried Chicken - Columbia Heights, MN - 5060 Central Avenue NE",5060 Central Avenue NE,Columbia Heights,MN,55421,US,45.06002283,-93.24821872
 KFC 12303 W. 75th Street,12303 W. 75th Street,Kenosha,WI,53142,US,,
-KFC 4405 52nd Street,4405 52nd Street,Kenosha,WI,53144,US,,
-KFC 8026 39th Avenue,8026 39th Avenue,Kenosha,WI,53142,US,,
+KFC 4405 52nd Street,4405 52nd Street,Kenosha,WI,53144,US,42.5883614,-87.86208
+KFC 8026 39th Avenue,8026 39th Avenue,Kenosha,WI,53142,US,42.5580967,-87.8554861
 "Kentucky Fried Chicken - Tilton, NH - 37 Tilton Road",37 Tilton Road,Tilton,NH,3276,US,43.45276556,-71.56507088
 "Kentucky Fried Chicken - Twin Falls, ID - 1549 Blue Lakes Boulevard North",1549 Blue Lakes Boulevard North,Twin Falls,ID,83301,US,42.58954836,-114.46067
 "Kentucky Fried Chicken - District Heights, MD - 6615 Marlboro Pike",6615 Marlboro Pike,District Heights,MD,20747,US,38.85150746,-76.89207183
 "Kentucky Fried Chicken - Clinton, IN - 1885 E State Road 163",1885 E State Road 163,Clinton,IN,47842,US,39.65578,-87.428629
-KFC 170 Abbott Road,170 Abbott Road,Buffalo,NY,14220,US,,
-KFC 2234 Elmwood Ave,2234 Elmwood Ave,Buffalo,NY,14216,US,,
-KFC 470 E. Delavan Avenue,470 E. Delavan Avenue,Buffalo,NY,14214,US,,
-KFC 220 Spring Street,220 Spring Street,Charleston,SC,29403,US,,
-KFC 220 Spring Street,220 Spring Street,Charleston,SC,29403,US,,
-KFC 5890 Rivers Ave,5890 Rivers Ave,Charleston,SC,29406,US,,
-KFC 4338 W Glendale Ave,4338 W Glendale Ave,Glendale,AZ,85301,US,,
-KFC 6708 W. Deer Valley Road,6708 W. Deer Valley Road,Glendale,AZ,85310,US,,
-KFC 6708 W. Deer Valley Road,6708 W. Deer Valley Road,Glendale,AZ,85310,US,,
-KFC 11935 Rosedale Hwy,11935 Rosedale Hwy,Bakersfield,CA,93312,US,,
-KFC 2674 Mount Vernon Avenue,2674 Mount Vernon Avenue,Bakersfield,CA,93305,US,,
-KFC 3011 Brundage Ln,3011 Brundage Ln,Bakersfield,CA,93304,US,,
-KFC 6320 White Ln,6320 White Ln,Bakersfield,CA,93309,US,,
-KFC 162 Los Altos Parkway,162 Los Altos Parkway,Sparks,NV,89436,US,,
+KFC 170 Abbott Road,170 Abbott Road,Buffalo,NY,14220,US,42.856138,-78.8227411
+KFC 2234 Elmwood Ave,2234 Elmwood Ave,Buffalo,NY,14216,US,42.9578806,-78.8784882
+KFC 470 E. Delavan Avenue,470 E. Delavan Avenue,Buffalo,NY,14214,US,42.9220701,-78.8395918
+KFC 220 Spring Street,220 Spring Street,Charleston,SC,29403,US,32.7874783,-79.9532611
+KFC 220 Spring Street,220 Spring Street,Charleston,SC,29403,US,32.7874783,-79.9532611
+KFC 5890 Rivers Ave,5890 Rivers Ave,Charleston,SC,29406,US,32.9019399,-80.0185545
+KFC 4338 W Glendale Ave,4338 W Glendale Ave,Glendale,AZ,85301,US,33.5387482,-112.153144
+KFC 6708 W. Deer Valley Road,6708 W. Deer Valley Road,Glendale,AZ,85310,US,33.6823245,-112.203624
+KFC 6708 W. Deer Valley Road,6708 W. Deer Valley Road,Glendale,AZ,85310,US,33.6823245,-112.203624
+KFC 11935 Rosedale Hwy,11935 Rosedale Hwy,Bakersfield,CA,93312,US,35.383552,-119.1061523
+KFC 2674 Mount Vernon Avenue,2674 Mount Vernon Avenue,Bakersfield,CA,93305,US,35.4012895,-118.9675983
+KFC 3011 Brundage Ln,3011 Brundage Ln,Bakersfield,CA,93304,US,35.3538221,-119.0381031
+KFC 6320 White Ln,6320 White Ln,Bakersfield,CA,93309,US,35.3185138,-119.0732642
+KFC 162 Los Altos Parkway,162 Los Altos Parkway,Sparks,NV,89436,US,39.5844889,-119.7420763
 KFC 275 N McCarran St,275 N McCarran St,Sparks,NV,89431,US,,
 "Kentucky Fried Chicken - Collierville, TN - 731 West Poplar Avenue",731 West Poplar Avenue,Collierville,TN,38017,US,35.0456956,-89.68671111
 "Kentucky Fried Chicken - Covington, WA - 17425 SE 272nd St",17425 SE 272nd St,Covington,WA,98042,US,47.35789406,-122.10932431
@@ -776,35 +776,35 @@ KFC 275 N McCarran St,275 N McCarran St,Sparks,NV,89431,US,,
 "Kentucky Fried Chicken - Central City, KY - 647 S. Second St",647 S. Second St,Central City,KY,42330,US,37.2852295,-87.1152345
 "Kentucky Fried Chicken - Everett, MA - 20 Everett Avenue",20 Everett Avenue,Everett,MA,2149,US,42.40232088,-71.04153586
 "Kentucky Fried Chicken - Rumford, RI - 29 Newport Avenue",29 Newport Avenue,Rumford,RI,2916,US,41.85886684,-71.35499984
-KFC 20 Hancock Bridge Parkway,20 Hancock Bridge Parkway,Cape Coral,FL,33991,US,,
-KFC 2210 South Del Prado Boulevard,2210 South Del Prado Boulevard,Cape Coral,FL,33990,US,,
+KFC 20 Hancock Bridge Parkway,20 Hancock Bridge Parkway,Cape Coral,FL,33991,US,26.6497883,-81.9776269
+KFC 2210 South Del Prado Boulevard,2210 South Del Prado Boulevard,Cape Coral,FL,33990,US,26.6406828,-81.9409701
 "Kentucky Fried Chicken - Bridgeview, IL - 8940 South Harlem Avenue",8940 South Harlem Avenue,Bridgeview,IL,60455,US,41.7283171,-87.79931552
-KFC 212 New Castle Road,212 New Castle Road,Butler,PA,16001,US,,
-KFC 218 New Castle Road,218 New Castle Road,Butler,PA,16001,US,,
+KFC 212 New Castle Road,212 New Castle Road,Butler,PA,16001,US,40.8701473,-79.9287237
+KFC 218 New Castle Road,218 New Castle Road,Butler,PA,16001,US,40.8762949,-79.9499788
 "Kentucky Fried Chicken - Beverly Hills, MI - 15616 Thirteen Mile Road",15616 Thirteen Mile Road,Beverly Hills,MI,48025,US,42.51776048,-83.20536732
 "Kentucky Fried Chicken - Murray, UT - 5892 South State Street",5892 South State Street,Murray,UT,84107,US,40.64346695,-111.88942982
 "Kentucky Fried Chicken - Christiansburg, VA - 200 Peppers Ferry Road N.E",200 Peppers Ferry Road N.E,Christiansburg,VA,24073,US,37.1637723,-80.42012927
 "Kentucky Fried Chicken - Minden, LA - 1050 Homer Road",1050 Homer Road,Minden,LA,71055,US,32.62326355,-93.25702027
 "Kentucky Fried Chicken - Elizabeth, NJ - 114-116 Rahway Avenue",114-116 Rahway Avenue,Elizabeth,NJ,7202,US,40.66074185,-74.21984114
 "Kentucky Fried Chicken - Coon Rapids, MN - 8770 University Avenue N.W",8770 University Avenue N.W,Coon Rapids,MN,55448,US,45.12929662,-93.2671801
-KFC 208 Alabama Street,208 Alabama Street,Columbus,MS,39702,US,,
-KFC 2224 Highway 45 North,2224 Highway 45 North,Columbus,MS,39705,US,,
+KFC 208 Alabama Street,208 Alabama Street,Columbus,MS,39702,US,33.4946312,-88.3762699
+KFC 2224 Highway 45 North,2224 Highway 45 North,Columbus,MS,39705,US,33.5283186,-88.4362813
 "Kentucky Fried Chicken - Brook Park, OH - 14901 Snow Road",14901 Snow Road,Brook Park,OH,44142,US,41.40344934,-81.80182164
-KFC 4005 Merle Hay Road,4005 Merle Hay Road,Des Moines,IA,50310,US,,
-KFC 4815 Southwest 9th Street,4815 Southwest 9th Street,Des Moines,IA,50315,US,,
-KFC 902 East Euclid Avenue,902 East Euclid Avenue,Des Moines,IA,50316,US,,
-KFC 2001 Rose Street,2001 Rose Street,La Crosse,WI,54603,US,,
-KFC 3415 Fiesta Court,3415 Fiesta Court,La Crosse,WI,54601,US,,
+KFC 4005 Merle Hay Road,4005 Merle Hay Road,Des Moines,IA,50310,US,41.6333567,-93.6972697
+KFC 4815 Southwest 9th Street,4815 Southwest 9th Street,Des Moines,IA,50315,US,41.5400691,-93.6253649
+KFC 902 East Euclid Avenue,902 East Euclid Avenue,Des Moines,IA,50316,US,41.6280716,-93.6057098
+KFC 2001 Rose Street,2001 Rose Street,La Crosse,WI,54603,US,43.8516532,-91.2487896
+KFC 3415 Fiesta Court,3415 Fiesta Court,La Crosse,WI,54601,US,43.7754353,-91.2216061
 "Kentucky Fried Chicken - Presque Isle, ME - 808 Main St",808 Main St,Presque Isle,ME,4769,US,46.69952501,-68.0100868
 "Kentucky Fried Chicken - Grafton, WV - 104 N. Pike Street",104 N. Pike Street,Grafton,WV,26354,US,39.34703285,-80.00464944
-KFC 15495 E. Andrews Drive,15495 E. Andrews Drive,Denver,CO,80239,US,,
-KFC 1679 Federal Boulevard,1679 Federal Boulevard,Denver,CO,80204,US,,
-KFC 2815 Colorado Boulevard,2815 Colorado Boulevard,Denver,CO,80207,US,,
-KFC 302 South Colorado Boulevard,302 South Colorado Boulevard,Denver,CO,80246,US,,
-KFC 3110 South Sheridan,3110 South Sheridan,Denver,CO,80227,US,,
-KFC 4880 N. Tower Road,4880 N. Tower Road,Denver,CO,80249,US,,
-KFC 7140 Pecos Street,7140 Pecos Street,Denver,CO,80221,US,,
-KFC 8500 Pena Blvd,8500 Pena Blvd,Denver,CO,80249,US,,
+KFC 15495 E. Andrews Drive,15495 E. Andrews Drive,Denver,CO,80239,US,39.773704,-104.8075017
+KFC 1679 Federal Boulevard,1679 Federal Boulevard,Denver,CO,80204,US,39.7434444,-105.0256794
+KFC 2815 Colorado Boulevard,2815 Colorado Boulevard,Denver,CO,80207,US,39.7568369,-104.940847
+KFC 302 South Colorado Boulevard,302 South Colorado Boulevard,Denver,CO,80246,US,39.711213,-104.9402465
+KFC 3110 South Sheridan,3110 South Sheridan,Denver,CO,80227,US,39.6553046,-105.0526448
+KFC 4880 N. Tower Road,4880 N. Tower Road,Denver,CO,80249,US,39.7856292,-104.771532
+KFC 7140 Pecos Street,7140 Pecos Street,Denver,CO,80221,US,39.7825246,-105.0064193
+KFC 8500 Pena Blvd,8500 Pena Blvd,Denver,CO,80249,US,39.8606676,-104.6853673
 "Kentucky Fried Chicken - Decatur, AL - 2208 Beltline Road",2208 Beltline Road,Decatur,AL,35601,US,34.58474405,-87.02358524
 "Kentucky Fried Chicken - De Queen, AR - 603 E. Collin Raye Drive",603 E. Collin Raye Drive,De Queen,AR,71832,US,34.04591111,-94.33125761
 "Kentucky Fried Chicken - Gresham, OR - 205 NW Burnside St",205 NW Burnside St,Gresham,OR,97030,US,45.5097039,-122.43307641
