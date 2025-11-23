@@ -2,7 +2,7 @@
 
 Kernel density map of KFC locations.
 
-![Colonel Density](./colonel-density.jpg)
+![Colonel Density](./img/colonel-density-border.jpg)
 
 ## About
 
